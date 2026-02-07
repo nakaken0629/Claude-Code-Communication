@@ -14,9 +14,17 @@
 ## 開発作業フロー
 
 ### 1. 作業依頼
-桃太郎に作業内容を伝えて依頼する。
+桃太郎に**開発作業の内容だけ**を伝えて依頼する。
+桃太郎は自分の指示書に従って issue 作成やお供への指示を行うので、プロセスの手順（「issue を作成せよ」「お供に指示せよ」等）は伝えないこと。
+
+**良い例:**
 ```bash
-./agent-send.sh 桃太郎 "作業内容の説明"
+./agent-send.sh 桃太郎 "chat-app/ 用の Dockerfile を作成し、Cloud Run にデプロイする Terraform スクリプトを作成してほしい。リージョンは asia-northeast1 で、GEMINI_API_KEY は Secret Manager で管理すること。"
+```
+
+**悪い例（プロセス指示を含んでいる）:**
+```bash
+./agent-send.sh 桃太郎 "issue を作成して、お供に Dockerfile の作成を指示してくれ"
 ```
 
 ### 2. 桃太郎からの確認対応
