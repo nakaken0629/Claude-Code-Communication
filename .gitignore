@@ -2,7 +2,6 @@
 logs/
 *.log
 *.txt
-!requirements.txt
 
 # 一時ファイル
 tmp/
